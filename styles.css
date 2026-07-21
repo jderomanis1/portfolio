@@ -648,7 +648,15 @@ footer span { color: var(--accent); }
 @media (max-width: 560px) {
   .cert-grid { grid-template-columns: 1fr; }
   .cert-group-cards { grid-template-columns: 1fr; }
-  .portrait-frame img { width: min(250px, 64vw); }
+  .portrait-frame img {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    background: transparent;
+    -webkit-mask-image: radial-gradient(ellipse 70% 65% at 50% 42%, black 55%, transparent 78%);
+    mask-image: radial-gradient(ellipse 70% 65% at 50% 42%, black 55%, transparent 78%);
+    width: min(300px, 78vw);
+  }
   .portrait-tag {
     position: static;
     transform: none;
