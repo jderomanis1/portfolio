@@ -469,11 +469,12 @@ section { padding: var(--s24) 0; }
   gap: var(--s4);
 }
 .cert {
+  position: relative;
   border: 1px solid var(--line);
   border-radius: var(--radius-sm);
   padding: var(--s4) var(--s6);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: var(--s4);
   background: var(--surface);
 }
@@ -482,8 +483,9 @@ section { padding: var(--s24) 0; }
   font-family: var(--font-mono);
   font-size: var(--text-xs);
   color: var(--accent);
-  min-width: 64px;
+  min-width: 68px;
   letter-spacing: 0.06em;
+  padding-top: 1px;
 }
 .cert-name { font-size: var(--text-sm); color: var(--text-soft); }
 .cert-more {
@@ -494,6 +496,108 @@ section { padding: var(--s24) 0; }
   color: var(--text-muted);
   letter-spacing: 0.14em;
   padding: var(--s4);
+}
+
+/* ── Credentials wall (grouped) ──────────────────── */
+.cert-wall {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s12);
+}
+.cert-group { display: flex; flex-direction: column; gap: var(--s4); }
+.cert-group-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding-bottom: var(--s3);
+  border-bottom: 1px solid var(--line);
+}
+.cert-group-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--s4);
+}
+.cert-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+.cert-issuer {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+}
+.cert-tag {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--accent);
+  letter-spacing: 0.12em;
+  margin-top: var(--s2);
+}
+.cert-link {
+  text-decoration: none;
+  color: inherit;
+  transition: border-color var(--dur-fast) var(--ease);
+}
+.cert-link .cert-arrow {
+  position: absolute;
+  top: var(--s3);
+  right: var(--s3);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--accent);
+  opacity: 0;
+  transition: opacity var(--dur-fast) var(--ease);
+  line-height: 1;
+}
+.cert-link:hover { border-color: rgba(226, 163, 60, 0.4); }
+.cert-link:hover .cert-arrow { opacity: 1; }
+.cert-link.featured:hover { border-color: rgba(226, 163, 60, 0.7); }
+.cert-link:focus-visible {
+  outline: 2px solid var(--accent-bright);
+  outline-offset: 2px;
+}
+.cert-education {
+  display: flex;
+  align-items: baseline;
+  gap: var(--s4);
+  margin-top: var(--s12);
+  padding-top: var(--s8);
+  border-top: 1px solid var(--line);
+}
+.cert-edu-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+.cert-edu-text {
+  font-size: var(--text-sm);
+  color: var(--text-soft);
+}
+.cert-footer { margin-top: var(--s6); }
+.cert-footer a {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  letter-spacing: 0.14em;
+  text-decoration: none;
+}
+.cert-footer a:hover, .cert-footer a:focus-visible { color: var(--accent-bright); }
+.cert-footer-sub {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  margin-top: var(--s2);
+  opacity: 0.65;
 }
 
 /* ── Contact / footer ─────────────────────────────── */
@@ -531,6 +635,7 @@ footer span { color: var(--accent); }
   .portrait-frame { justify-self: start; }
   .eng-grid, .ai-grid { grid-template-columns: 1fr; }
   .cert-grid { grid-template-columns: 1fr 1fr; }
+  .cert-group-cards { grid-template-columns: 1fr 1fr; }
   .telemetry-grid { grid-template-columns: 1fr 1fr; }
   .telemetry-cell:nth-child(3) { border-left: none; border-top: 1px solid var(--line); }
   .telemetry-cell:nth-child(4) { border-top: 1px solid var(--line); }
@@ -542,6 +647,7 @@ footer span { color: var(--accent); }
 }
 @media (max-width: 560px) {
   .cert-grid { grid-template-columns: 1fr; }
+  .cert-group-cards { grid-template-columns: 1fr; }
   section { padding: var(--s16) 0; }
 }
 
