@@ -60,6 +60,25 @@
       <li><a href="#certs">Credentials</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+    <button class="nav-hamburger" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-nav-panel">
+      <svg width="22" height="16" viewBox="0 0 22 16" fill="none" aria-hidden="true">
+        <rect x="0" y="0" width="22" height="2" rx="1" fill="currentColor"/>
+        <rect x="0" y="7" width="22" height="2" rx="1" fill="currentColor"/>
+        <rect x="0" y="14" width="22" height="2" rx="1" fill="currentColor"/>
+      </svg>
+    </button>
+  </div>
+  <div class="mobile-nav-panel" id="mobile-nav-panel" aria-hidden="true">
+    <div class="mobile-nav-inner">
+      <ul>
+        <li><a href="#record">The Record</a></li>
+        <li><a href="#engagements">Engagements</a></li>
+        <li><a href="#value">Value</a></li>
+        <li><a href="#ai">The AI Chapter</a></li>
+        <li><a href="#certs">Credentials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
   </div>
 </nav>
 
@@ -263,7 +282,7 @@
       <div class="ledger-entry">
         <button class="ledger-row" aria-expanded="false">
           <span class="ledger-years">2025 – Present</span>
-          <span class="ledger-title">KinderCare Learning Companies<small>Senior Scrum Master &amp; Agile Coach · Agile Intelligence Architect · AI-Native Delivery Pilot Lead</small></span>
+          <span class="ledger-title">KinderCare Learning Companies<small>Agile Intelligence Architect · AI-Native Delivery Pilot Lead</small></span>
           <span class="ledger-toggle" aria-hidden="true">+</span>
         </button>
         <div class="ledger-body"><div class="ledger-body-inner">
@@ -424,7 +443,7 @@
 
       <!-- AI -->
       <div class="cert-group">
-        <div class="cert-group-label">AI</div>
+        <button class="cert-group-label" aria-expanded="true">AI<span class="cert-count"></span><span class="cert-group-toggle" aria-hidden="true">+</span></button>
         <div class="cert-group-cards">
           <a class="cert cert-link featured" href="https://www.credly.com/users/joseph-deromanis/badges" target="_blank" rel="noopener">
             <span class="cert-abbr">CCA-F</span>
@@ -448,7 +467,7 @@
 
       <!-- SCALED AGILE -->
       <div class="cert-group">
-        <div class="cert-group-label">SCALED AGILE</div>
+        <button class="cert-group-label" aria-expanded="false">SCALED AGILE<span class="cert-count"></span><span class="cert-group-toggle" aria-hidden="true">+</span></button>
         <div class="cert-group-cards">
           <a class="cert cert-link" href="https://www.credly.com/users/joseph-deromanis/badges" target="_blank" rel="noopener">
             <span class="cert-abbr">SPC6</span>
@@ -543,7 +562,7 @@
 
       <!-- COACHING, SCRUM AND KANBAN -->
       <div class="cert-group">
-        <div class="cert-group-label">COACHING, SCRUM AND KANBAN</div>
+        <button class="cert-group-label" aria-expanded="false">COACHING, SCRUM AND KANBAN<span class="cert-count"></span><span class="cert-group-toggle" aria-hidden="true">+</span></button>
         <div class="cert-group-cards">
           <a class="cert cert-link" href="https://www.credly.com/users/joseph-deromanis/badges" target="_blank" rel="noopener">
             <span class="cert-abbr">ICP-ACC</span>
@@ -606,7 +625,7 @@
 
       <!-- PROGRAM AND PROCESS -->
       <div class="cert-group">
-        <div class="cert-group-label">PROGRAM AND PROCESS</div>
+        <button class="cert-group-label" aria-expanded="false">PROGRAM AND PROCESS<span class="cert-count"></span><span class="cert-group-toggle" aria-hidden="true">+</span></button>
         <div class="cert-group-cards">
           <a class="cert cert-link" href="https://www.credly.com/users/joseph-deromanis/badges" target="_blank" rel="noopener">
             <span class="cert-abbr">PMP</span>
@@ -668,7 +687,21 @@
 </section>
 
 <footer>
-  DEROMANIS<span>.COM</span> · BUILT WITH CLAUDE · © <span id="year"></span> JOE DEROMANIS 🐾
+  <div class="footer-nav">
+    <div class="footer-nav-links">
+      <a href="#record">The Record</a>
+      <a href="#engagements">Engagements</a>
+      <a href="#value">Value</a>
+      <a href="#ai">The AI Chapter</a>
+      <a href="#certs">Credentials</a>
+      <a href="#contact">Contact</a>
+      <a href="#top">Back to top &#x2191;</a>
+    </div>
+    <a href="mailto:joe@deromanis.com" class="footer-email">joe@deromanis.com</a>
+  </div>
+  <div class="footer-copy">
+    DEROMANIS<span>.COM</span> · BUILT WITH CLAUDE · © <span id="year"></span> JOE DEROMANIS 🐾
+  </div>
 </footer>
 
 <script src="app.js"></script>
