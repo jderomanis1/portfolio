@@ -702,7 +702,9 @@ footer span { color: var(--accent); }
 }
 .footer-nav-links a:hover, .footer-nav-links a:focus-visible,
 .footer-email:hover, .footer-email:focus-visible { color: var(--accent-bright); }
-.footer-copy { color: var(--text-muted); }
+.footer-copy { color: var(--text-muted); display: flex; flex-wrap: wrap; justify-content: center; gap: 0 var(--s3); }
+.footer-copy-left, .footer-copy-right { white-space: nowrap; }
+@media (max-width: 560px) { .footer-copy { flex-direction: column; align-items: center; gap: var(--s1); } }
 
 /* ── Reveal on scroll ─────────────────────────────── */
 .reveal {
