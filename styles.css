@@ -217,7 +217,30 @@ body {
   background-size: 72px 72px;
   mask-image: radial-gradient(760px 480px at 72% 30%, rgba(0,0,0,0.5), transparent 75%);
   pointer-events: none;
+  z-index: 1;
 }
+
+/* Family arms watermark */
+.hero { overflow: hidden; }
+.hero .container { position: relative; z-index: 2; }
+.crest-watermark {
+  position: absolute;
+  right: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 600px;
+  height: auto;
+  opacity: 0.17;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  mask-image: radial-gradient(closest-side at 50% 50%, #000 35%, transparent 100%);
+  -webkit-mask-image: radial-gradient(closest-side at 50% 50%, #000 35%, transparent 100%);
+}
+@media (max-width: 820px) {
+  .crest-watermark { right: -120px; width: 440px; opacity: 0.12; }
+}
+
 .hero-grid {
   display: grid;
   grid-template-columns: 1.35fr 0.9fr;
@@ -675,6 +698,30 @@ footer {
   letter-spacing: 0.1em;
 }
 footer span { color: var(--accent); }
+
+/* Family arms sigil */
+.crest-sigil {
+  display: block;
+  width: 44px;
+  height: auto;
+  margin: 0 auto 12px;
+  opacity: 0.5;
+  filter: grayscale(1) brightness(1.15);
+  transition: opacity 0.5s var(--ease), filter 0.5s var(--ease);
+}
+.crest-sigil:hover, .crest-sigil:focus-visible { opacity: 1; filter: none; }
+.crest-lineage {
+  display: block;
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  opacity: 0.7;
+  margin-bottom: 14px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .crest-sigil { transition: none; }
+}
 .footer-nav {
   display: flex;
   flex-direction: column;
