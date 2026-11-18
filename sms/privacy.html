@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230A0D13'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='14' fill='%23E2A33C' text-anchor='middle'%3EJD%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .legal {
+      max-width: 42rem;
+      margin: 0 auto;
+      padding: calc(6rem + 2rem) 1.5rem 4rem;
+    }
+    .legal .eyebrow { margin-bottom: 0.75rem; }
+    .legal h1 {
+      font-family: var(--font-display);
+      font-size: var(--text-3xl);
+      line-height: 1.15;
+      margin: 0 0 1rem;
+      color: var(--text);
+    }
+    .legal h2 {
+      font-family: var(--font-display);
+      font-size: var(--text-xl);
+      margin: 2rem 0 0.75rem;
+      color: var(--text);
+    }
+    .legal p, .legal li, .legal label {
+      color: var(--text-soft);
+      line-height: 1.65;
+    }
+    .legal p { margin: 0 0 1rem; }
+    .legal a { color: var(--accent); }
+    .legal a:hover, .legal a:focus-visible { color: var(--accent-bright); }
+    .legal-meta {
+      font-family: var(--font-mono);
+      font-size: var(--text-xs);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+    .sms-form {
+      margin-top: 2rem;
+      padding: 1.5rem;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+    }
+    .sms-form .field { margin-bottom: 1.25rem; display: flex; flex-direction: column; gap: 0.4rem; }
+    .sms-form label.field-label {
+      font-family: var(--font-mono);
+      font-size: var(--text-xs);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .sms-form input[type="text"],
+    .sms-form input[type="tel"] {
+      background: var(--bg-deep);
+      color: var(--text);
+      border: 1px solid var(--line-strong);
+      border-radius: var(--radius-sm);
+      padding: 0.75rem 0.9rem;
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+    }
+    .sms-form input[type="text"]:focus,
+    .sms-form input[type="tel"]:focus {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+    .consent-row {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+      margin: 1.25rem 0 1.5rem;
+    }
+    .consent-row input[type="checkbox"] {
+      margin-top: 0.35rem;
+      width: 1.15rem;
+      height: 1.15rem;
+      flex-shrink: 0;
+      accent-color: var(--accent);
+    }
+    .form-note {
+      font-size: var(--text-sm);
+      color: var(--text-muted);
+      margin-top: 1rem;
+    }
+    .placeholder-banner {
+      font-family: var(--font-mono);
+      font-size: var(--text-xs);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid var(--line-strong);
+      border-radius: var(--radius-sm);
+      padding: 0.75rem 1rem;
+      margin-bottom: 1.25rem;
+    }
+  </style>
+  <title>Privacy Policy | Joe DeRomanis AI Assistant</title>
+  <meta name="description" content="Privacy policy for Joe DeRomanis AI Assistant SMS and voice program. Mobile information and consent are not shared with third parties or affiliates for marketing.">
+  <link rel="canonical" href="https://deromanis.com/sms/privacy.html">
+  <meta name="robots" content="index, follow">
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="nav-mark" href="/">DEROMANIS<span>.COM</span></a>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/sms/">SMS opt-in</a></li>
+      <li><a href="/sms/privacy.html">Privacy</a></li>
+      <li><a href="/sms/terms.html">SMS Terms</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-nav-panel">
+      <svg width="22" height="16" viewBox="0 0 22 16" fill="none" aria-hidden="true">
+        <rect x="0" y="0" width="22" height="2" rx="1" fill="currentColor"/>
+        <rect x="0" y="7" width="22" height="2" rx="1" fill="currentColor"/>
+        <rect x="0" y="14" width="22" height="2" rx="1" fill="currentColor"/>
+      </svg>
+    </button>
+  </div>
+  <div class="mobile-nav-panel" id="mobile-nav-panel" aria-hidden="true">
+    <div class="mobile-nav-inner">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/sms/">SMS opt-in</a></li>
+        <li><a href="/sms/privacy.html">Privacy</a></li>
+        <li><a href="/sms/terms.html">SMS Terms</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <main class="legal">
+    <span class="eyebrow">SMS program</span>
+    <h1>Privacy Policy</h1>
+    <p class="legal-meta">Effective date: November 18, 2026 · Joe DeRomanis AI Assistant</p>
+    <p>This policy describes the Joe DeRomanis AI Assistant program operated by Joe DeRomanis (Deromanis), a sole proprietor. The program is a personal AI assistant. Joe DeRomanis is the intended recipient of messages and calls on this line.</p>
+
+    <h2>What is collected and how it is used</h2>
+    <p>If you submit the opt-in form, the program collects your name, mobile number, and your consent. If you text the program number, it collects the phone number that texts it and the content of those messages. If you call the line, it collects the calling number and call audio, which is processed in real time so the assistant can answer.</p>
+    <p>This information is used only to operate the personal assistant: to confirm opt-in, honor opt-out, and answer the user's own requests about their project task board.</p>
+
+    <h2>Mobile information and consent</h2>
+    <p>Mobile information and messaging consent are never shared with third parties or affiliates for marketing. Joe DeRomanis does not sell personal data and does not share it for marketing or promotional purposes.</p>
+
+    <h2>Processors</h2>
+    <p>Twilio provides telephony and SMS. xAI provides AI processing of message content and of call audio. These processors receive only what is needed to provide those services.</p>
+
+    <h2>Retention</h2>
+    <p>Retention is minimal. Logs hold only hashed phone numbers where logs are kept. Call audio is processed in real time and is not kept after the call.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about this policy: <a href="mailto:jdero75@gmail.com">jdero75@gmail.com</a>. Related: <a href="/sms/terms.html">SMS Terms</a> and the <a href="/sms/">SMS opt-in page</a>.</p>
+  </main>
+
+<footer>
+  <div class="footer-nav">
+    <div class="footer-nav-links">
+      <a href="/">Home</a>
+      <a href="/sms/">SMS opt-in</a>
+      <a href="/sms/privacy.html">Privacy</a>
+      <a href="/sms/terms.html">SMS Terms</a>
+    </div>
+    <a href="mailto:jdero75@gmail.com" class="footer-email">jdero75@gmail.com</a>
+  </div>
+  <img class="crest-sigil" src="../assets/crest-modern.png" alt="Arms of the De Romanis family" title="Arms of the De Romanis family">
+  <span class="crest-lineage">Arma De Romanis · A nod to those who came before</span>
+  <div class="footer-copy">
+    <span class="footer-copy-left">DEROMANIS<span>.COM</span> · BUILT WITH CLAUDE</span>
+    <span class="footer-copy-right">© <span id="year"></span> JOE DEROMANIS 🐾</span>
+  </div>
+</footer>
+<script src="../app.js"></script>
+
+</body>
+</html>
